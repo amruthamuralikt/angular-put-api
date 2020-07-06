@@ -16,7 +16,7 @@ $sql ="insert into user('name') values('" . $content[0]['name'] . "')";
 $result = $mysqli->query($sql);
 $lastid= $mysqli->insert_id;
 
-$queryb = "select * from user where id = '"$lastid."' ";
+$query = "select * from user where id = '".$lastid."' ";
 $res = $mysqli->query($query);
 $arr1 = array();
 while ($row = $res->fetch_assoc())
